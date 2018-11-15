@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">{{ user.name.first | titlecase }}</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-4">
+        <img [src]="user.picture.large" alt="{{ user.name.first }}" class="img-responsive" style="max-height: 300px;">
+      </div>
+      <div class="col-xs-8">
+        <blockquote>
+          <h1>{{user.name.title | titlecase}} {{user.name.first | titlecase}} {{ user.name.last | titlecase }}</h1>
+          <footer>
+            <h4> {{user.dob.age}}, {{user.gender}} </h4>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-6">
+        <h3>Address:</h3>
+        <h4> {{user.location.street}}, {{user.location.city}}, {{user.location.state}}</h4>
+        <h5>Postcode:
+          <span class="label label-default">{{user.location.postcode}}</span>
+        </h5>
+      </div>
+      <div class="col-xs-6">
+        <h3>Contact Details:</h3>
+        <div class="row">
+          <div class="col-xs-6">
+            <h4>Phone:
+              <span class="label label-primary">{{user.phone}}</span>
+            </h4>
+          </div>
+          <div class="col-xs-6">
+            <h4>Cell:
+              <span class="label label-primary">{{user.cell}}</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        {{ user.description }}
+      </div>
+    </div>
+    <div class="row">
+      <div style="text-align:center;">
+        <h4>E-Mail: <span class="label label-primary"> {{user.email}} </span></h4>
+      </div>
+    </div>
+
+  </div>
+</div>
